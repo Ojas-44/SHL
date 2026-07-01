@@ -26,7 +26,7 @@ def startup_event():
 
     try:
         retriever = Retriever()
-        agent = ChatAgent()
+        agent = ChatAgent(retriever)
 
         print(
             f"Loaded existing FAISS index with "

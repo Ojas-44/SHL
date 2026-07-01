@@ -5,10 +5,11 @@ from services.llm import generate_response
 from services.retriever import Retriever
 
 
-class ChatAgent:
 
-    def __init__(self):
-        self.retriever = Retriever()
+
+class ChatAgent:
+    def __init__(self, retriever):
+        self.retriever = retriever
 
     def _normalize_messages(self, messages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         normalized: List[Dict[str, Any]] = []
